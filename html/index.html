@@ -33,7 +33,7 @@
             <div class="bottom-nav">
                 <ul>
                 <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
-                <li><a href="#">Livros</a></li>
+                <li><a href="#livros">Livros</a></li>
                 <li><a href="#">Eventos</a></li>
                 <li><a href="#">Agenda</a></li>
                 <li><a href="quemsomos.html">Quem somos</a></li>
@@ -49,9 +49,20 @@
     <!-- Conteúdo principal -->
     <main>
         <!-- Carrousel que mostras os livros -->
-        <section>
+        <section class="#livro">
+            <div class="carousel-container">
+                <button class="nav-button prev-button"><</button>
+                    <div class="carousel-track-container">
+                        <div class="carousel-track"></div>
+                    </div>
+                <button class="nav-button next-button">></button>
+            </div>
 
+            <div class="load-more-container">
+                <button id="load-more-btn">Mais livros</button>
+            </div>
         </section>
+        <div class="livro-divider"></div>
 
         <!-- Eventos -->
         <section>
@@ -93,14 +104,14 @@
             
             <div class="footer-links">
             <div class="links-column">
-                <h4><a href="">AGENDA</a></h4>
-                <h4><a href="">EVENTOS</a></h4>
-                <h4><a href="quemsomos.html">QUEM SOMOS</a></h4>
+                <h4><a href=""><b>AGENDA</b></a></h4>
+                <h4><a href=""><b>EVENTOS</b></a></h4>
+                <h4><a href="quemsomos.html"><b>QUEM SOMOS</b></a></h4>
             </div>
             <div class="links-column">
-                <h4>ENTREGA</h4>
-                <h4>DEVOLUÇÃO OU TROCA</h4>
-                <h4>OUTRAS DÚVIDAS</h4>
+                <h4><b>ENTREGA</b></h4>
+                <h4><b>DEVOLUÇÃO OU TROCA</b></h4>
+                <h4><b>OUTRAS DÚVIDAS</b></h4>
             </div>
             </div>
         </div>
@@ -108,7 +119,7 @@
         <div class="footer-divider"></div>
         
         <div class="copyright-info">
-            <p style="font-family: 'Crimson Text', serif;">&copy; Livraria Caamano e Foscarini | CNPJ 63,686,768/0001-73 | Rua Coronel Manoel Py, 222 - Higienópolis, Porto Alegre/RS - CEP 90550-040</p>
+            <p style="font-family: 'Crimson Text', serif;"><b>&copy; Livraria Caamano e Foscarini | CNPJ 63,686,768/0001-73 | Rua Coronel Manoel Py, 222 - Higienópolis, Porto Alegre/RS - CEP 90550-040</b></p>
         </div>
     </footer>
 

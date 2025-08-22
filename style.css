@@ -1,12 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+:root {
+  --cor-fundo: #edeaea;
+  --cinza-escuro: #333532;
+  --laraja-apagado: #b2955b;
+  --amarelo-fraco: #bda984;
+  --creme-clarinho: #f3e8d2;
+  --cinza-clarinho: #8c867a; 
+}
+
 body {
   margin: 0;
+  background-color: var(--cor-fundo);
   font-family: 'Prompt', sans-serif;
 }
 
+/************************** HEADER **************************/
 nav {
-  background-color: #f5f0e9;
+  background-color: var(--cor-fundo);
   padding: 10px 0;
   text-align: center;
 }
@@ -47,9 +58,78 @@ nav {
 .bottom-nav li:last-child a {
   font-size: 1.5em;
 }
+/**********************************************************/
 
+/****************** Section carrousel ********************/
+section {
+  background-color: var(--cor-fundo);
+}
+
+/* Container principal do carrossel */
+.carousel-container {
+  position: relative; /* Essencial para posicionar as setas */
+  display: flex; /* Para alinhar as setas e o conteúdo */
+  align-items: center; /* Alinha verticalmente os botões com o carrossel */
+}
+
+.carousel-track-container {
+  width: 100%;
+  overflow: hidden; /* Oculta os itens que não estão visíveis */
+}
+
+.carousel-track {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.5s ease-in-out; /* Adiciona uma transição suave */
+}
+
+.book-card {
+  min-width: calc(15% - 15px); /* Mostra 4 itens por vez (100% / 4) com o gap */
+  background-color: var(--cor-fundo);
+  border-radius: 8px;
+  text-align: center;
+  padding: 15px;
+  flex-shrink: 0;
+}
+
+/* Estilo das setas de navegação */
+.nav-button {
+  background-color: var(--cor-fundo);
+  border: 1px #000000 solid;
+  color: rgb(0, 0, 0);
+  font-size: 2em;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-40%);
+  z-index: 10;
+}
+
+.prev-button {
+  left: 10px;
+}
+
+.next-button {
+  right: 10px;
+}
+
+.load-more-container {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.livro-divider {
+  height: 2px;
+  background-color: #b88a2d;
+  margin-top: 10px;
+}
+/************************************************************/
+
+/************************** FOOTER **************************/
 footer {
-  background-color: #f5f0e9;
+  background-color: var(--cor-fundo);
   color: #c7c7c7;
   padding: 40px 20px;
   font-family: Arial, sans-serif;
@@ -85,7 +165,7 @@ footer {
 }
 
 .newsletter-form input {
-  padding: 10px;
+  padding: 5px;
   border: 1px solid #c7a468;
   background-color: transparent;
   color: #000000;
@@ -99,7 +179,7 @@ footer {
 }
 
 .newsletter-form button {
-  padding: 10px 20px;
+  padding: 5px 20px;
   border: none;
   background-color: #3d3b3a;
   color: #ffffff;
@@ -164,3 +244,4 @@ footer {
     line-height: 1.5;
     color: #999;
 }
+/***********************************************************/
