@@ -17,10 +17,9 @@ O projeto foi criado para incentivar o acesso à leitura e valorizar a literatur
 - CSS3 (com Bootstrap);
 - JavaScript ES6+;
 - Open Library API = Usada como banco de dados para a pesquisa e procura de livros;
-- Google Calendar API = Para criar e gerenciar todos os eventos da livraria em um calendário do Google;
-- FullCalendar = Puxar os eventos diretamente do calendário do Google, exibindo-os de forma bonita e interativa.
 - Leaflet = Será a ferramenta que permitirá aos usuários ver a localização da livraria e a deles mesmos em um mapa interativo.
 - Chart.js api = Usada para colocar os dados em gráficos;
+- Iframe teamup = exibir calendário
 - Git + GitHub.
 
 ## Acessibilidade e Responsividade
