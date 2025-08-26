@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livaria Caamano Foscarini</title>
+    <!-- Link icon ao lado do título -->
+     <link rel="icon" href="/img/icone-.png" type="image/x-icon">
+
+    <!-- Links styles -->
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
+
+    <!-- Links fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <!-- Links icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <nav>
+            <div class="top-nav">
+                <div class="logo">
+                <img src="/img/logo.png" alt="Caamano e Foscarini Logo">
+                </div>
+            </div>
+            
+            <div class="bottom-nav">
+                <ul>
+                <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                <li><a href="#livros">Livros</a></li>
+                <li><a href="#eventos">Eventos</a></li>
+                <li><a href="#agenda">Agenda</a></li>
+                <li><a href="quemsomos.html">Quem somos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="#"><i class="fa-solid fa-shopping-cart"></i></a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="divider"></div>
+    </header>
+
+    
+    <!-- Conteúdo principal -->
+    <main>
+        <!-- Carrousel que mostras os livros -->
+        <section id="#livros">
+            <div class="carousel-container">
+                <button class="nav-button prev-button"><</button>
+                    <div class="carousel-track-container">
+                        <div class="carousel-track"></div>
+                    </div>
+                <button class="nav-button next-button">></button>
+            </div>
+
+            <div class="load-more-container">
+                <button id="load-more-btn">Mais livros</button>
+            </div>
+        </section>
+        <div class="livro-divider"></div>
+
+        <!-- Eventos -->
+        <section id="eventos" class="container my-5">
+            <h1 class="text-event">Eventos</h1>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+                <!-- Card 1 -->
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="/img/card1.jpg" class="card-img-top evento-card-img" alt="Jornada Literária">
+                        <div class="card-body">
+                            <h5 class="card-title">1° Jornada Literária de Viamão</h5>
+                            <p class="card-text">sex, 29 de ago. - dom., 31 de ago.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="/img/card2.jfif" class="card-img-top evento-card-img" alt="Oficina de Escrita">
+                        <div class="card-body">
+                            <h5 class="card-title">Oficina de Escrita: Minha ideia quer virar...</h5>
+                            <p class="card-text">30 de ago. - 13 de set.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="/img/card3.jfif" class="card-img-top evento-card-img" alt="Viver e Desaparecer">
+                        <div class="card-body">
+                            <h5 class="card-title">Viver e Desaparecer: reflexões da filosofia</h5>
+                            <p class="card-text">11 - 25 de set.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="/img/card4.jfif" class="card-img-top evento-card-img" alt="Clube de Leitura">
+                        <div class="card-body">
+                            <h5 class="card-title">Clube de Leitura: A Prova, de Ágota Kristóf - com Diego Grando</h5>
+                            <p class="card-text">sáb., 16:00 - 18:00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="/img/card5.jfif" class="card-img-top evento-card-img" alt="Clube de Leitura">
+                        <div class="card-body">
+                            <h5 class="card-title">Clube de Leitura: A Terceira Mentira, de Ágota Kristóf - com Diego Grando</h5>
+                            <p class="card-text">sáb., 16:00 - 18:00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="/img/card6.jfif" class="card-img-top evento-card-img" alt="Clube de Leitura">
+                        <div class="card-body">
+                            <h5 class="card-title">Clube de Leitura: Eu que nunca conheci os homens, de Jacqueline Harpman</h5>
+                            <p class="card-text">sáb., 16:00 - 18:00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="divider"></div>
+
+        <!-- Agenda -->
+        <section id="#agenda"class="container my-5">
+            <h1 class="text-event">Agende-se</h1>
+
+            <div class="calendar-container" style="margin-top: 2rem;">
+                <iframe
+                src="https://teamup.com/ks3msizt6nvhsshfoi"
+                width="100%"
+                height="700"
+                frameborder="0"
+                style="border: 1px solid #ccc; border-radius: 8px;">
+                </iframe>
+            </div>
+        </section>
+        
+        <!-- O que os leitores estão lendo -->
+        <section>
+
+        </section>
+    </main>
+
+
+    <!-- Rodapé -->
+    
+
+    <div class="footer-divider"></div>
+    <footer>
+        <div class="footer-content">
+            <div class="newsletter-section">
+            <h3><b>NEWSLETTER</b></h3>
+            <p style="font-family: 'Crimson Text', serif;">Saiba das novidades, eventos e promoções por e-mail :)</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="SEU EMAIL AQUI">
+                <button type="submit">ASSINAR</button>
+            </form>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            </div>
+            
+            <div class="footer-links">
+            <div class="links-column">
+                <h4><a href=""><b>AGENDA</b></a></h4>
+                <h4><a href=""><b>EVENTOS</b></a></h4>
+                <h4><a href="quemsomos.html"><b>QUEM SOMOS</b></a></h4>
+            </div>
+            <div class="links-column">
+                <h4><b>ENTREGA</b></h4>
+                <h4><b>DEVOLUÇÃO OU TROCA</b></h4>
+                <h4><b>OUTRAS DÚVIDAS</b></h4>
+            </div>
+            </div>
+        </div>
+        
+        <div class="footer-divider"></div>
+        
+        <div class="copyright-info">
+            <p style="font-family: 'Crimson Text', serif;"><b>&copy; Livraria Caamano e Foscarini | CNPJ 63,686,768/0001-73 | Rua Coronel Manoel Py, 222 - Higienópolis, Porto Alegre/RS - CEP 90550-040</b></p>
+        </div>
+    </footer>
+
+    <script src="/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
