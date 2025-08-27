@@ -16,6 +16,13 @@ body {
 }
 
 /************************** HEADER **************************/
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10000;
+}
+
 nav {
   background-color: var(--cor-fundo);
   padding: 10px 0;
@@ -58,11 +65,49 @@ nav {
 .bottom-nav li:last-child a {
   font-size: 1.5em;
 }
+
+.search-box {
+    display: none; /* Inicialmente oculta */
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--cor-fundo);
+    border-bottom: 2px solid var(--laranja-apagado);
+}
+
+.search-box.visible {
+    display: flex; /* Exibe quando a classe 'visible' é adicionada */
+}
+
+#search-input {
+    padding: 8px 12px;
+    border: 1px solid var(--cinza-escuro);
+    border-radius: 5px;
+    width: 300px;
+    font-size: 1em;
+    outline: none;
+    margin-right: 10px;
+}
+
+#search-button {
+    padding: 8px 15px;
+    border: none;
+    background-color: var(--cinza-escuro);
+    color: var(--cor-fundo);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#search-button:hover {
+    background-color: var(--laraja-apagado);
+}
 /**********************************************************/
 
 /****************** Section carrousel ********************/
 main {
   background-color: var(--cor-fundo);
+  padding-top: 220px;
 }
 
 section {
@@ -88,12 +133,37 @@ section {
 }
 
 .book-card {
-  min-width: calc(15% - 15px); /* Mostra 4 itens por vez (100% / 4) com o gap */
+  /* Define uma altura fixa para todos os cards */
+  height: 400px; 
+  min-width: calc(25% - 15px);
   background-color: var(--cor-fundo);
   border-radius: 8px;
   text-align: center;
   padding: 15px;
   flex-shrink: 0;
+    
+  /* Usa Flexbox para alinhar o conteúdo verticalmente */
+  display: flex;
+  flex-direction: column;
+}
+
+.book-card img {
+  /* Garante que a imagem preencha o espaço disponível */
+  width: 100%;
+  height: 80%;
+}
+
+.book-title {
+  /* Força o título a ocupar o espaço necessário */
+  flex-grow: 1; 
+  overflow: hidden; /* Evita que o texto saia do card se for muito longo */
+  text-overflow: ellipsis; /* Adiciona "..." se o texto for muito longo */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+.book-author {
+    margin-top: auto; /* Empurra o preço para baixo */
 }
 
 /* Estilo das setas de navegação */
@@ -257,8 +327,6 @@ footer {
   border: 0;
   height: 2px;
   background-color: #c7a468;
-  margin-top: 10px;
-  margin-bottom: 0px;
 }
 
 .copyright-info {
