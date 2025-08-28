@@ -32,13 +32,20 @@
             
             <div class="bottom-nav">
                 <ul>
-                <li><a id="search-icon"><i class="fa-solid fa-magnifying-glass"></i></a></li>
-                <li><a href="#livros">Livros</a></li>
-                <li><a href="#eventos">Eventos</a></li>
-                <li><a href="#agenda">Agenda</a></li>
-                <li><a href="quemsomos.html">Quem somos</a></li>
-                <li><a href="contato.html">Contato</a></li>
-                <li><a href="#"><i class="fa-solid fa-shopping-cart"></i></a></li>
+                    <li><a id="search-icon"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                    <li><a href="#livros">Livros</a></li>
+                    <li><a href="#eventos">Eventos</a></li>
+                    <li><a href="#agenda">Agenda</a></li>
+                    <li><a href="quemsomos.html">Quem somos</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li class="cart-container">
+                        <a href="#"><i class="fa-solid fa-shopping-cart"></i></a>
+                        <div class="cart-dropdown" id="cart-dropdown">
+                            <div id="cart-items"></div>
+                            <p>Total: R$ <span id="cart-total">0,00</span></p>
+                            <a href="compras.html" class="finalizar-btn">FINALIZAR</a>
+                        </div>
+                    </li>
                 </ul>
             </div>
             <div class="search-box">

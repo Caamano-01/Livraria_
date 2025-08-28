@@ -147,64 +147,81 @@ nav {
 .finalizar-btn:hover {
   background-color: #5f5236;
 }
-/************************************************************/
-/********************* QUEM SOMOS ***************************/
+
+/**********************************************************/
 main {
   padding-top: 220px;
   background-color: var(--cor-fundo);
-}
-
-main section {
-  background-color: var(--cor-fundo);
-  padding: 60px 20px;
-  font-family: 'Crimson Text', serif;
-}
-
-.container {
+  font-family: 'Prompt', sans-serif;
+  min-height: 100vh;
   display: flex;
-  flex-wrap: wrap;
-  max-width: 1100px;
-  margin: auto;
-  gap: 40px;
-  align-items: flex-start;
+  justify-content: center;
 }
 
-.image {
-  flex: 1;
-  min-width: 300px;
-}
-
-.image img {
+/* Seção do carrinho */
+.cart-summary {
+  margin: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 30px 40px;
+  max-width: 600px;
   width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-.content {
-  flex: 2;
-  min-width: 300px;
-}
-
-.content h1 {
-  font-family: 'Prompt', sans-serif;
-  font-weight: 700;
-  font-size: 24px;
-  text-transform: uppercase;
-  margin-bottom: 25px;
-}
-
-.content p {
-  font-size: 18px;
-  line-height: 1.8;
+/* Título */
+.cart-summary h2 {
+  font-size: 1.8rem;
+  color: #333532;
   margin-bottom: 20px;
+  text-align: center;
 }
 
-.highlight {
+/* Itens do carrinho */
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f7f7f7;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #333;
+  border-left: 4px solid #b2955b;
+}
+
+/* Total e botão */
+.cart-total {
+  text-align: center;
+}
+
+.cart-total p {
+  font-size: 1.2rem;
   font-weight: bold;
-  font-family: 'Prompt', sans-serif;
+  margin-bottom: 15px;
   color: #000;
 }
-/************************************************************/
+
+#buy-button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  background-color: #b2955b;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#buy-button:hover {
+  background-color: #867249;
+}
 /************************** FOOTER **************************/
 footer {
   background-color: var(--cor-fundo);
@@ -321,3 +338,21 @@ footer {
     color: #999;
 }
 /***********************************************************/
+
+/* Responsividade para telas menores */
+@media (max-width: 480px) {
+  .cart-container {
+    margin: 2rem 1rem 4rem;
+    padding: 1.5rem 1.8rem;
+  }
+  
+  .cart-item-title,
+  .cart-item-price {
+    font-size: 1rem;
+  }
+  
+  #buy-button {
+    font-size: 1.1rem;
+    padding: 0.9rem 0;
+  }
+}

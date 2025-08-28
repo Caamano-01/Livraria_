@@ -65,6 +65,88 @@ nav {
 .bottom-nav li:last-child a {
   font-size: 1.5em;
 }
+
+.search-box {
+    display: none; /* Inicialmente oculta */
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--cor-fundo);
+    border-bottom: 2px solid var(--laranja-apagado);
+}
+
+.search-box.visible {
+    display: flex; /* Exibe quando a classe 'visible' é adicionada */
+}
+
+#search-input {
+    padding: 8px 12px;
+    border: 1px solid var(--cinza-escuro);
+    border-radius: 5px;
+    width: 300px;
+    font-size: 1em;
+    outline: none;
+    margin-right: 10px;
+}
+
+#search-button {
+    padding: 8px 15px;
+    border: none;
+    background-color: var(--cinza-escuro);
+    color: var(--cor-fundo);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#search-button:hover {
+    background-color: var(--laraja-apagado);
+}
+
+.cart-container {
+  position: relative;
+}
+
+.cart-dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 40px;
+  background: white;
+  border: 1px solid #ccc;
+  width: 260px;
+  z-index: 9999;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+}
+
+.cart-container:hover .cart-dropdown {
+  display: block;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.finalizar-btn {
+  display: block;
+  margin-top: 10px;
+  padding: 8px;
+  background-color: var(--laraja-apagado);
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.finalizar-btn:hover {
+  background-color: #5f5236;
+}
 /**********************************************************/
 /**************** PÁGINA CONTATO **************************/
 main {
