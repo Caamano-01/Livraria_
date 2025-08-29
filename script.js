@@ -320,105 +320,53 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
-/*************************** MAPA LEAFLET **********************/
-document.addEventListener('DOMContentLoaded', function () {
-  // Seu código Leaflet permanece igual
-  const map = L.map('map').setView([-30.0337, -51.1965], 17);
 
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '© OpenStreetMap'
-  }).addTo(map);
+/***************************************************************/
 
-  const bookIcon = L.icon({
-    iconUrl: 'img/book-icon.png',
-    iconSize: [40, 40],
-    iconAnchor: [20, 40],
-    popupAnchor: [0, -40]
-  });
-
-  const livrariaCoords = [-30.0337, -51.1965];
-  L.marker(livrariaCoords, { icon: bookIcon })
-    .addTo(map)
-    .bindPopup("<b>Livraria Caamano e Foscarini</b><br>Rua Coronel Manoel Py, 222")
-    .openPopup();
-
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(
-      position => {
-        const userLat = position.coords.latitude;
-        const userLng = position.coords.longitude;
-
-        document.getElementById("geolocation-status").textContent = "Localização encontrada!";
-        document.getElementById("user-location").textContent =
-          `Latitude: ${userLat.toFixed(4)}, Longitude: ${userLng.toFixed(4)}`;
-
-        const userIcon = L.icon({
-          iconUrl: 'img/user-location.png',
-          iconSize: [40, 40],
-          iconAnchor: [20, 40],
-          popupAnchor: [0, -40]
-        });
-
-        L.marker([userLat, userLng], { icon: userIcon })
-          .addTo(map)
-          .bindPopup("Você está aqui 👣")
-          .openPopup();
-
-        map.setView([userLat, userLng], 15);
-      },
-      error => {
-        document.getElementById("geolocation-status").textContent = "Não foi possível obter sua localização.";
-      }
-    );
-  } else {
-    document.getElementById("geolocation-status").textContent = "Geolocalização não suportada.";
-  }
-});
-/****************************************************************/
 /********************** PÁGINA DE COMPRAS ***********************/
 document.addEventListener('DOMContentLoaded', () => {
   const checkoutItemsContainer = document.getElementById('checkout-cart-items');
   const checkoutTotal = document.getElementById('checkout-cart-total');
-
-  // Carrega os itens do carrinho do localStorage usando chave padronizada "cart"
-  const cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-  // Mostra os itens no checkout
-  cart.forEach(item => {
-    const itemElement = document.createElement('div');
-    itemElement.classList.add('cart-item');
-
-    itemElement.innerHTML = `
-      <span class="cart-item-title">${item.title}</span>
-      <span class="cart-item-price">R$ ${(item.price * item.qtd).toFixed(2)} x ${item.qtd}</span>
-    `;
-
-    checkoutItemsContainer.appendChild(itemElement);
-  });
-
-  // Atualiza o total
-  const total = cart.reduce((sum, item) => sum + item.price * item.qtd, 0);
-  checkoutTotal.textContent = total.toFixed(2);
-});
-
-/* qrcode */
-document.addEventListener('DOMContentLoaded', () => {
   const buyButton = document.getElementById('buy-button');
   const qrSection = document.getElementById('qrcode-section');
   const qrImage = document.getElementById('qrcode-img');
 
+  // 1. Carregar e exibir itens do carrinho
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+  if (cart.length === 0) {
+    checkoutItemsContainer.innerHTML = '<p>Nenhum item no carrinho.</p>';
+  } else {
+    cart.forEach(item => {
+      const itemElement = document.createElement('div');
+      itemElement.classList.add('cart-item');
+
+      itemElement.innerHTML = `
+        <span class="cart-item-title">${item.title}</span>
+        <span class="cart-item-price">R$ ${(item.price * item.qtd).toFixed(2)} x ${item.qtd}</span>
+      `;
+
+      checkoutItemsContainer.appendChild(itemElement);
+    });
+
+    // 2. Atualizar o total
+    const total = cart.reduce((sum, item) => sum + item.price * item.qtd, 0);
+    checkoutTotal.textContent = total.toFixed(2);
+  }
+
+  // 3. Geração do QR Code
   buyButton.addEventListener('click', () => {
-    // 1. Exibir o alerta
     alert('Após o pagamento será realizado o pedido.');
 
-    // 2. Gerar o QR Code com a API
     const paymentInfo = "https://seudominio.com/pagamento?id=12345";
     qrImage.src = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(paymentInfo)}`;
 
-    // 3. Mostrar a seção do QR Code
     qrSection.style.display = 'block';
-
-    // 4. Rolar até o QR Code suavemente
     qrSection.scrollIntoView({ behavior: 'smooth' });
+
+    // 4. Limpa o carrinho ao sair da página
+    window.addEventListener('beforeunload', () => {
+      localStorage.removeItem('cart');
+    });
   });
 });
