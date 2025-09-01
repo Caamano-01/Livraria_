@@ -17,7 +17,12 @@ O projeto foi criado para incentivar o acesso à leitura e valorizar a literatur
 - CSS3 (com Bootstrap);
 - JavaScript ES6+;
 - Open Library API = Usada como banco de dados para a pesquisa e procura de livros;
+<<<<<<< HEAD
 - Iframe Teamuo - mostrar calendário
+=======
+- Teamup = Para criar e gerenciar todos os eventos da livraria em um calendário;
+- QR code API = Gerar um QRcode para pagamento via PIX no carrinho de compras;
+>>>>>>> dev
 - Leaflet = Será a ferramenta que permitirá aos usuários ver a localização da livraria e a deles mesmos em um mapa interativo.
 - Chart.js api = Usada para colocar os dados em gráficos;
 - Git + GitHub.

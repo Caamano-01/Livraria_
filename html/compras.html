@@ -5,21 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Livaria Caamano Foscarini</title>
     <!-- Link icon ao lado do título -->
-<<<<<<< HEAD
-     <link rel="icon" href="" type="image/x-icon">
-
-    <!-- Links styles -->
-    <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
-
-    <!-- Links fonts -->
-    
-    <!-- Links icons -->
-=======
      <link rel="icon" href="/img/icone-.png" type="image/x-icon">
 
     <!-- Links styles -->
-    <link rel="stylesheet" href="/styles/style3.css">
+    <link rel="stylesheet" href="/styles/style4.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
 
     <!-- Links fonts -->
@@ -29,7 +18,6 @@
     
     <!-- Links icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
->>>>>>> dev
 
 </head>
 <body>
@@ -38,35 +26,19 @@
         <nav>
             <div class="top-nav">
                 <div class="logo">
-<<<<<<< HEAD
-                <img src="" alt="Caamano e Foscarini Logo">
-=======
                 <a href="index.html"><img src="/img/logo.png" alt="Caamano e Foscarini Logo"></a>
->>>>>>> dev
                 </div>
             </div>
             
             <div class="bottom-nav">
                 <ul>
-<<<<<<< HEAD
-                <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-                <li><a href="quemsomos.html"></a></li>
-                <li><a href="contato.html"></a></li>
-                <li><a href="#"><i class="fa-solid fa-shopping-cart"></i></a></li>
-                </ul>
-            </div>
-        </nav>
-        <hr class="divider">
-=======
-                <li><a id="search-icon"><i class="fa-solid fa-magnifying-glass"></i></a></li>
-                <li><a href="/html/index.html">Livros</a></li>
-                <li><a href="/html/index.html">Eventos</a></li>
-                <li><a href="/html/index.html">Agenda</a></li>
-                <li><a href="quemsomos.html">Quem somos</a></li>
-                <li><a href="contato.html">Contato</a></li>
-                <li class="cart-container">
+                    <li><a id="search-icon"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                    <li><a href="/html/index.html">Livros</a></li>
+                    <li><a href="#/html/index.html">Eventos</a></li>
+                    <li><a href="#/html/index.html">Agenda</a></li>
+                    <li><a href="quemsomos.html">Quem somos</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li class="cart-container">
                         <a href="#"><i class="fa-solid fa-shopping-cart"></i></a>
                         <div class="cart-dropdown" id="cart-dropdown">
                             <div id="cart-items"></div>
@@ -75,55 +47,34 @@
                         </div>
                     </li>
                 </ul>
-            </div>
             <div class="search-box">
                 <input type="text" id="search-input" placeholder="Buscar livros...">
                 <button id="search-button"><i class="fa-solid fa-search"></i></button>
             </div>
         </nav>
         <div class="divider"></div>
->>>>>>> dev
     </header>
 
-    
-    <!-- Conteúdo quem somos -->
+    <!-- MAIN -->
     <main>
-        <section>
-<<<<<<< HEAD
+        <section class="cart-summary">
+            <h2>Itens no Carrinho</h2>
+            <div id="checkout-cart-items" class="cart-items"></div>
 
-=======
-            <div class="container">
-                <div class="image">
-                    <img src="/img/contato-img.avif" alt="Café e livro">
-                </div>
-                <div class="content">
-                    <h1>Uma Livraria Que Lê</h1>
-                    <p>Lê o agora. As vozes da rua, os silêncios das páginas, os ruídos da história.</p>
-                    <p>A Caamano e Foscarini é uma livraria de bairro, no coração de Higienópolis, onde o livro é ponto de encontro. Entre leitores, ideias e conversas que não acabam na última página.</p>
-                    <p>Lemos literatura, pensamento crítico, poesia, quadrinhos, memórias e futuros. Lemos com quem chega, com quem pergunta, com quem compartilha.</p>
-                    <p>Aqui, cada livro tem motivo pra estar. E cada pessoa, espaço pra escolher — ou descobrir.</p>
-                    <p class="highlight">Vem ler com a gente.</p>
-                </div>
+            <div class="cart-total">
+                <p>Total: R$ <span id="checkout-cart-total">0,00</span></p>
+                <button id="buy-button">Confirmar Compra</button>
             </div>
->>>>>>> dev
+
+            <!-- QR Code container (inicialmente oculto) -->
+            <div id="qrcode-section" style="display: none; margin-top: 30px; text-align: center;">
+                <h3>Escaneie o QR Code para finalizar o pagamento:</h3>
+                <img id="qrcode-img" src="" alt="QR Code de pagamento">
+            </div>
         </section>
     </main>
 
-
     <!-- Rodapé -->
-<<<<<<< HEAD
-    <hr class="divider">
-
-    <hr class="footer-divider">
-    <footer>
-        <div class="footer-content">
-            <div class="newsletter-section">
-            <h3></h3>
-            <p></p>
-            <form class="newsletter-form">
-                <input type="email" placeholder="SEU EMAIL AQUI">
-                <button type="submit"></button>
-=======
     <div class="footer-divider"></div>
     <footer>
         <div class="footer-content">
@@ -133,7 +84,6 @@
             <form class="newsletter-form">
                 <input type="email" placeholder="SEU EMAIL AQUI">
                 <button type="submit">ASSINAR</button>
->>>>>>> dev
             </form>
             <div class="social-icons">
                 <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
@@ -145,16 +95,6 @@
             
             <div class="footer-links">
             <div class="links-column">
-<<<<<<< HEAD
-                <h4></h4>
-                <h4></h4>
-                <h4></h4>
-            </div>
-            <div class="links-column">
-                <h4></h4>
-                <h4></h4>
-                <h4></h4>
-=======
                 <h4><a href="#agenda"><b>AGENDA</b></a></h4>
                 <h4><a href="#eventos"><b>EVENTOS</b></a></h4>
                 <h4><a href="quemsomos.html"><b>QUEM SOMOS</b></a></h4>
@@ -163,22 +103,14 @@
                 <h4><b>ENTREGA</b></h4>
                 <h4><b>DEVOLUÇÃO OU TROCA</b></h4>
                 <h4><b>OUTRAS DÚVIDAS</b></h4>
->>>>>>> dev
             </div>
             </div>
         </div>
         
-<<<<<<< HEAD
-        <hr class="footer-divider">
-        
-        <div class="copyright-info">
-            <p></p>
-=======
         <div class="footer-divider"></div>
         
         <div class="copyright-info">
             <p style="font-family: 'Crimson Text', serif;"><b>&copy; Livraria Caamano e Foscarini | CNPJ 63,686,768/0001-73 | Rua Coronel Manoel Py, 222 - Higienópolis, Porto Alegre/RS - CEP 90550-040</b></p>
->>>>>>> dev
         </div>
     </footer>
 
