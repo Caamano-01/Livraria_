@@ -34,3 +34,6 @@ O projeto foi criado para incentivar o acesso à leitura e valorizar a literatur
 ## 👥Equipe
 - Isabele Caamaño
 - Vitória Foscarini
+
+## Site
+- https://caamanofoscarini.netlify.app/
