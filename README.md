@@ -15,13 +15,16 @@ O projeto foi criado para incentivar o acesso à leitura e valorizar a literatur
 ## Tecnologias Utilizadas
 - HTML5;
 - CSS3 (com Bootstrap);
-- JavaScript ES6+;
-- Open Library API = Usada como banco de dados para a pesquisa e procura de livros;
-- Teamup = Para criar e gerenciar todos os eventos da livraria em um calendário;
-- QR code API = Gerar um QRcode para pagamento via PIX no carrinho de compras;
-- Leaflet = Será a ferramenta que permitirá aos usuários ver a localização da livraria e a deles mesmos em um mapa interativo.
-- Chart.js api = Usada para colocar os dados em gráficos;
+- JavaScript;
 - Git + GitHub.
+
+- API's
+    - Open Library API = Usada como banco de dados para a pesquisa e procura de livros;
+    - QR code API = Gerar um QRcode para pagamento via PIX no carrinho de compras;
+    - Leaflet = Será a ferramenta que permitirá aos usuários ver a localização da livraria e a deles mesmos em um mapa interativo.
+
+- Iframe
+    - Teamup = Para criar e gerenciar todos os eventos da livraria em um calendário;
 
 ## Acessibilidade e Responsividade
 - Suporte à navegação por teclado

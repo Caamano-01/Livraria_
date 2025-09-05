@@ -6,7 +6,8 @@
   --laraja-apagado: #b2955b;
   --amarelo-fraco: #bda984;
   --creme-clarinho: #f3e8d2;
-  --cinza-clarinho: #8c867a; 
+  --cinza-clarinho: #8c867a;
+  --cor-fundo-dark: #1a1a1a;
 }
 
 body {
@@ -337,15 +338,106 @@ footer {
     line-height: 1.5;
     color: #999;
 }
+
+.footer-links h4:hover {
+  scale: 1.1;
+}
 /***********************************************************/
 
 
+/* Troca a logo no modo escuro */
+body.dark-mode #logo-img {
+    content: url('/img/logo-dark.png');
+}
+
+/* Tema escuro */
+body.dark-mode nav,
+body.dark-mode main,
+body.dark-mode footer,
+body.dark-mode .search-box{
+  background-color: var(--cor-fundo-dark);
+}
+
+body.dark-mode section {
+  background-color: #4b4948;
+}
+
+body.dark-mode section h2,
+body.dark-mode section h3,
+body.dark-mode section p {
+  color: #f1f1f1;
+}
+
+body.dark-mode .nav-button {
+  background-color: #292e31;
+  color: white;
+}
+
+body.dark-mode .cart-dropdown {
+  background-color: #444444;
+  color: #f1f1f1;
+}
+
+body.dark-mode a,
+body.dark-mode .bottom-nav  {
+  color: #ffffff;
+}
+
+body.dark-mode .newsletter-section h3,
+body.dark-mode .newsletter-section p,
+body.dark-mode .links-column h4,
+body.dark-mode .links-column h4 a,
+body.dark-mode .copyright-info p {
+  color: #f1f1f1;
+}
+
+body.dark-mode .divider,
+body.dark-mode .livro-divider,
+body.dark-mode .footer-divider {
+  background-color: #c7a468;
+}
+
+body.dark-mode .newsletter-form input {
+  color: #f1f1f1;
+  border: 1px solid #c7a468;
+}
+
+body.dark-mode .newsletter-form input::placeholder {
+  color: #ffffff;
+}
 
 
+#dark-mode-toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background-color: #ffd700;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  transition: background-color 0.3s ease;
+}
 
+#dark-mode-toggle::before {
+  content: '☀️';
+  transition: content 0.3s ease;
+}
 
+body.dark-mode #dark-mode-toggle {
+  background-color: #555;
+  color: #fff;
+}
 
-
+body.dark-mode #dark-mode-toggle::before {
+  content: '🌙';
+}
 
 @media (max-width: 768px) {
   .bottom-nav {

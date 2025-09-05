@@ -370,3 +370,31 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+/*************** TEMA ESCURO  **************/
+const toggleButton = document.getElementById('dark-mode-toggle');
+toggleButton.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    if (document.body.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark');
+    } else {
+        localStorage.setItem('theme', 'light');
+    }
+      updateButtonIcon();
+    });
+
+  function updateButtonIcon() {
+      if (document.body.classList.contains('dark-mode')) {
+        toggleButton.style.backgroundColor = '#555';
+      } else {
+        toggleButton.style.backgroundColor = '#ffd700';
+      }
+  }
+
+  // Ao carregar, aplica tema salvo
+  window.addEventListener('load', () => {
+      if (localStorage.getItem('theme') === 'dark') {
+          document.body.classList.add('dark-mode');
+      }
+      updateButtonIcon();
+});
