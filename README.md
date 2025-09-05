@@ -40,4 +40,8 @@ O projeto foi criado para incentivar o acesso à leitura e valorizar a literatur
 - Vitória Foscarini
 
 ## Site
+<<<<<<< HEAD
 - https://caamanofoscarini.netlify.app/
+=======
+- https://caamanofoscarini.netlify.app/
+>>>>>>> 13efe4abf914b2438144a824f0e6d8447674d641
